@@ -1,0 +1,83 @@
+/* Styles personnalisés pour la Médiathèque de Versailles */
+
+/* === STICKY FOOTER === */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Le contenu principal doit prendre tout l'espace disponible */
+main {
+    flex: 1;
+}
+
+/* Le footer reste en bas */
+.footer {
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+/* Amélioration des cartes */
+.card {
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Amélioration des badges */
+.badge {
+    padding: 0.4em 0.6em;
+    font-weight: 500;
+}
+
+/* Amélioration des alertes */
+.alert {
+    border-radius: 8px;
+    border-left: 4px solid;
+}
+
+.alert-success {
+    border-left-color: #28a745;
+}
+
+.alert-danger {
+    border-left-color: #dc3545;
+}
+
+/* Amélioration des tables */
+.table-hover tbody tr:hover {
+    background-color: #f1f3f5;
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.alert {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Responsive améliorations */
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+    }
+}
